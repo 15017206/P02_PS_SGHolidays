@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int itemPosition = position;
-
                 String itemValue = (String) listView.getItemAtPosition(position);
 
+                System.out.println(position);
+
                 // Show Alert
-                Toast.makeText(getApplicationContext(),
-                        "Position :"+itemPosition+"  ListItem : " +itemValue , Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),"Position :"+itemPosition+"  ListItem : " +itemValue , Toast.LENGTH_SHORT).show();
 
                 Intent i = new Intent(MainActivity.this, Main2Activity.class);
                 i.putExtra("type", itemValue);
